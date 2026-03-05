@@ -608,20 +608,32 @@ video {
   min-height: 100vh;
 }
 
-.min-w-full {
-  min-width: 100%;
-}
-
-.max-w-\[540px\] {
-  max-width: 540px;
+.w-screen {
+  width: 100vw;
 }
 
 .max-w-full {
   max-width: 100%;
 }
 
+.max-w-xl {
+  max-width: 36rem;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
 .flex-col-reverse {
   flex-direction: column-reverse;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.items-start {
+  align-items: flex-start;
 }
 
 .items-center {
@@ -634,6 +646,10 @@ video {
 
 .gap-5 {
   gap: 1.25rem;
+}
+
+.overflow-x-hidden {
+  overflow-x: hidden;
 }
 
 .scroll-smooth {
@@ -681,6 +697,14 @@ video {
   padding-bottom: 0.5rem;
 }
 
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}
+
 .font-mona {
   font-family: Mona Sans, sans-serif;
 }
@@ -695,9 +719,9 @@ video {
   line-height: 2.25rem;
 }
 
-.text-6xl {
-  font-size: 3.75rem;
-  line-height: 1;
+.text-4xl {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
 }
 
 .text-lg {
@@ -741,6 +765,18 @@ video {
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
 }
 
+.text-\[\#eee5e2\]\/70 {
+  color: rgb(238 229 226 / 0.7);
+}
+
+.text-\[\#eee5e2\]\/50 {
+  color: rgb(238 229 226 / 0.5);
+}
+
+.text-\[\#eee5e2\]\/60 {
+  color: rgb(238 229 226 / 0.6);
+}
+
 .backdrop-blur-lg {
   --tw-backdrop-blur: blur(16px);
   backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
@@ -755,13 +791,15 @@ video {
   opacity: 0.7;
 }
 
+@media (max-width: 800px) {
+  .max-\[800px\]\:text-center {
+    text-align: center;
+  }
+}
+
 @media (min-width: 640px) {
   .sm\:inline-block {
     display: inline-block;
-  }
-
-  .sm\:inline {
-    display: inline;
   }
 
   .sm\:hidden {
@@ -770,6 +808,70 @@ video {
 
   .sm\:flex-row {
     flex-direction: row;
+  }
+
+  .sm\:px-4 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .sm\:text-6xl {
+    font-size: 3.75rem;
+    line-height: 1;
+  }
+}
+
+@media (min-width: 768px) {
+  .md\:hidden {
+    display: none;
+  }
+
+  .md\:flex-row {
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 800px) {
+  .tab\:inline-block {
+    display: inline-block;
+  }
+
+  .tab\:flex-row {
+    flex-direction: row;
+  }
+
+  .tab\:text-clip {
+    text-overflow: clip;
+  }
+
+  .tab\:text-balance {
+    text-wrap: balance;
+  }
+
+  .tab\:text-pretty {
+    text-wrap: pretty;
+  }
+
+  .tab\:text-left {
+    text-align: left;
+  }
+
+  .tab\:text-center {
+    text-align: center;
+  }
+
+  .tab\:text-right {
+    text-align: right;
+  }
+
+  .tab\:text-start {
+    text-align: start;
+  }
+}
+
+@media (min-width: 1024px) {
+  .lg\:hidden {
+    display: none;
   }
 }
 

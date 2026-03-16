@@ -566,11 +566,6 @@ video {
   z-index: 50;
 }
 
-.mx-auto {
-  margin-left: auto;
-  margin-right: auto;
-}
-
 .my-2 {
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
@@ -623,6 +618,10 @@ video {
 
 .w-screen {
   width: 100vw;
+}
+
+.min-w-full {
+  min-width: 100%;
 }
 
 .max-w-full {
@@ -777,8 +776,16 @@ video {
   text-align: center;
 }
 
+.font-bebas {
+  font-family: "Bebas Neue", sans-serif;
+}
+
 .font-mona {
   font-family: Mona Sans, sans-serif;
+}
+
+.font-dm-serif {
+  font-family: "DM Serif Display", serif;
 }
 
 .text-2xl {
@@ -791,9 +798,9 @@ video {
   line-height: 2.25rem;
 }
 
-.text-4xl {
-  font-size: 2.25rem;
-  line-height: 2.5rem;
+.text-5xl {
+  font-size: 3rem;
+  line-height: 1;
 }
 
 .text-lg {
@@ -815,6 +822,10 @@ video {
 
 .font-semibold {
   font-weight: 600;
+}
+
+.tracking-\[2px\] {
+  letter-spacing: 2px;
 }
 
 .text-\[\#2F1E14\] {
@@ -853,6 +864,13 @@ video {
 .backdrop-blur-lg {
   --tw-backdrop-blur: blur(16px);
   backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+}
+
+.no-scrollbar {
+  scrollbar-width: none;
+  -webkit-scrollbar {
+    display: none;
+  }
 }
 
 .hover\:bg-\[\#A08055\]:hover {
@@ -900,37 +918,32 @@ video {
   }
 }
 
-@media (min-width: 640px) {
-  .sm\:inline-block {
+@media (min-width: 768px) {
+  .md\:inline-block {
     display: inline-block;
   }
 
-  .sm\:hidden {
+  .md\:hidden {
     display: none;
   }
 
-  .sm\:px-4 {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-
-  .sm\:text-6xl {
-    font-size: 3.75rem;
+  .md\:text-7xl {
+    font-size: 4.5rem;
     line-height: 1;
   }
 }
 
-@media (min-width: 800px) {
-  .tab\:inline-block {
-    display: inline-block;
-  }
-
+@media (min-width: 850px) {
   .tab\:text-left {
     text-align: left;
   }
 }
 
 @media (min-width: 1024px) {
+  .lg\:inline-block {
+    display: inline-block;
+  }
+
   .lg\:flex-row {
     flex-direction: row;
   }

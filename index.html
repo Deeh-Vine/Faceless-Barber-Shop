@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" class="scroll-smooth">
+<html lang="en" class="scroll-smooth no-scrollbar">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,15 +11,16 @@
       href="https://fonts.googleapis.com/css2?family=Mona+Sans:ital,wght@0,200..900;1,200..900&display=swap"
       rel="stylesheet"
     />
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Serif+Display&display=swap" rel="stylesheet">
   </head>
   <body
     class="bg-slate-200 dark:bg-slate-900 overflow-x-hidden dark:text-white font-mona h-[1000px]"
   >
     <header
-      class="bg-[#90a1b9]/40 backdrop-blur-lg border-b border-[#BA986A] min-w-screen w-screen dark:bg-[#BA986A]/25 sticky top-0 z-50 p-4"
+      class="bg-[#90a1b9]/40 backdrop-blur-lg border-b border-[#BA986A] min-w-screen dark:bg-[#BA986A]/25 sticky top-0 z-50 p-4"
     >
       <section
-        class="p-4 flex items-center justify-between max-w-full mx-auto text-slate-950 dark:text-white"
+        class="px-4 flex items-center justify-between max-w-full text-slate-950 dark:text-white"
       >
         <a href=""
           ><div class="flex items-center">
@@ -28,50 +29,58 @@
               alt="Faceless logo"
               class="size-12 inline-block mr-2"
             />
-            <h1 class="text-2xl font-mona font-semibold dark:font-medium">
+            <h1 class="text-3xl font-bebas font-semibold dark:font-medium tracking-[2px]">
               Faceless
             </h1>
           </div></a
         >
 
-        <button
-          class="text-3xl inline-block sm:hidden"
-          aria-label="Toggle navigation"
-        >
-          &#9776;
-        </button>
-        <nav class="hidden sm:inline-block">
+        <nav class="hidden md:inline-block">
           <ul
             class="flex gap-5 text-lg font-mona font-semibold dark:font-medium"
           >
-            <li><a href="#Home" class="hover:opacity-70">Home</a></li>
-            <li><a href="#Services" class="hover:opacity-70">Services</a></li>
+            <li><a href="#Home" class="hover:opacity-70">HOME</a></li>
+            <li><a href="#Services" class="hover:opacity-70">SERVICES</a></li>
             <li>
-              <a href="#Testimonials" class="hover:opacity-70">Testimonials</a>
+              <a href="#Testimonials" class="hover:opacity-70">TESTIMONIALS</a>
             </li>
-            <li><a href="#About" class="hover:opacity-70">About Us</a></li>
+            <li><a href="#About" class="hover:opacity-70">ABOUT</a></li>
             <li>
               <a
                 href="#Contact"
                 class="text-[#2F1E14] hover:text-[#2F1E14]/80 font-bold dark:text-[#BA986A]/35 dark:hover:text-[#BA986A]/70"
-                >Contact</a
+                >CONTACT</a
               >
             </li>
           </ul>
         </nav>
         <button
-          class="bg-[#2F1E14]/90 text-white font-semibold py-2 px-4 rounded-3xl hover:bg-[#A08055] dark:bg-[#BA986A]/35 dark:hover:bg-[#BA986A]/50 hidden tab:inline-block"
+          class="text-3xl inline-block md:hidden"
+          aria-label="Toggle navigation"
+        >
+          &#9776;
+        </button>
+        
+        <button
+          class="bg-[#2F1E14]/90 text-white font-semibold py-2 px-4 rounded-3xl hover:bg-[#A08055] dark:bg-[#BA986A]/35 dark:hover:bg-[#BA986A]/50 hidden lg:inline-block"
         >
           WHATSAPP
         </button>
       </section>
+      <nav class="hidden" id="drop-down-nav">
+            <a href="#">Home</a>
+            <a href="#">Services</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </nav>
     </header>
-    <main class="w-screen px-4 items-center sm:px-4">
+    <main class="w-screen items-center">
       <section
-        class="max-w-full p-7 flex flex-col-reverse justify-between items-center gap-20 min-h-screen mx-auto lg:flex-row"
+        class="min-w-full p-7 flex flex-col-reverse justify-between items-center gap-20 min-h-screen lg:flex-row"
       >
         <div
-          class="bg-white bg-opacity-[0.05] border border-[#BA986A] rounded-2xl py-10 px-8 max-sm:mx-20 flex flex-col justify-center">
+          class="bg-white bg-opacity-[0.05] border border-[#BA986A] rounded-2xl py-10 px-8 max-sm:mx-20 flex flex-col justify-center"
+        >
           <div class="my-2">
             <p class="text-2xl font-semibold text-[#eee5e2]">
               Make An Appointment
@@ -106,7 +115,10 @@
             </div>
             <div>
               <label for="service" class="hidden">Service</label>
-              <select id="service" class="bg-white w-full bg-opacity-[0.1] py-2 px-4 font-medium rounded-xl border border-white/50 focus:outline-none focus:border-none focus:ring-1 focus:ring-[#BA986A] text-white/60 focus:text-black">
+              <select
+                id="service"
+                class="bg-white w-full bg-opacity-[0.1] py-2 px-4 font-medium rounded-xl border border-white/50 focus:outline-none focus:border-none focus:ring-1 focus:ring-[#BA986A] text-white/60 focus:text-black"
+              >
                 <option value="" disabled selected>Select a service</option>
                 <option value="haircut">Haircut</option>
                 <option value="shave">Shave</option>
@@ -115,14 +127,22 @@
               </select>
             </div>
             <div class="flex gap-4 w-">
-              <input type="datetime-local" class="bg-white w-full bg-opacity-[0.1] py-2 px-4 font-medium rounded-xl border border-white/50 focus:outline-none focus:border-none focus:ring-1 focus:ring-[#BA986A] text-white/60" placeholder="set datetime">
-              <button class="bg-[#2F1E14] text-white font-semibold py-2 px-4 rounded-3xl hover:bg-[#A08055] dark:bg-[#BA986A]/50 dark:hover:bg-[#BA986A]/65 text-nowrap">Book Now</button>
+              <input
+                type="datetime-local"
+                class="bg-white w-full bg-opacity-[0.1] py-2 px-4 font-medium rounded-xl border border-white/50 focus:outline-none focus:border-none focus:ring-1 focus:ring-[#BA986A] text-white/60"
+                placeholder="set datetime"
+              />
+              <button
+                class="bg-[#2F1E14] text-white font-semibold py-2 px-4 rounded-3xl hover:bg-[#A08055] dark:bg-[#BA986A]/50 dark:hover:bg-[#BA986A]/65 text-nowrap"
+              >
+                Book Now
+              </button>
             </div>
           </div>
         </div>
         <article class="mt-32 flex flex-wrap items-center max-w-xl text-center">
           <h1
-            class="text-slate-950 text-4xl font-black mb-4 font-mona dark:text-[#eee5e2] items-start sm:text-6xl lg:text-right"
+            class="text-slate-950 text-5xl font-black mb-4 font-mona dark:text-[#eee5e2] items-start md:text-7xl lg:text-right"
           >
             WELCOME TO
             <span class="text-[#2F1E14] dark:text-[#BA986A]">FACELESS</span>

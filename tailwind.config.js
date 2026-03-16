@@ -4,10 +4,12 @@ module.exports = {
   theme: {
     extend: {
       screens:{
-        tab: "800px",
+        tab: "850px",
       },
       fontFamily: {
         'mona': ['Mona Sans', 'sans-serif'],
+        'bebas': ['"Bebas Neue"', 'sans-serif'],
+        'dm-serif': ['"DM Serif Display"', 'serif'],
       }
     },
   },

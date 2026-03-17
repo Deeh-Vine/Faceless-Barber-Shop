@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {
       screens:{
-        tab: "850px",
+        tab: "800px",
       },
       fontFamily: {
         'mona': ['Mona Sans', 'sans-serif'],

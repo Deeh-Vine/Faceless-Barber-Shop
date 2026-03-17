@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" class="scroll-smooth no-scrollbar ">
+<html lang="en" class="scroll-smooth no-scrollbar">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,7 +11,10 @@
       href="https://fonts.googleapis.com/css2?family=Mona+Sans:ital,wght@0,200..900;1,200..900&display=swap"
       rel="stylesheet"
     />
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Serif+Display&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Serif+Display&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body
     class="bg-slate-200 dark:bg-slate-900 overflow-x-hidden dark:text-white font-mona h-[1000px]"
@@ -29,7 +32,9 @@
               alt="Faceless logo"
               class="size-12 inline-block mr-2"
             />
-            <h1 class="text-3xl font-dm-serif font-semibold dark:font-medium tracking-[2px]">
+            <h1
+              class="text-3xl font-dm-serif font-semibold dark:font-medium tracking-[2px]"
+            >
               Faceless
             </h1>
           </div></a
@@ -55,26 +60,60 @@
           </ul>
         </nav>
         <button
-          class="text-3xl inline-block md:hidden"
-          aria-label="Toggle navigation"
+          id="menu-trigger"
+          type="button"
+          aria-label="Toggle navigation menu"
+          class="group relative w-10 h-10 flex flex-col justify-center items-center gap-1.5 md:hidden [&.is-active]:rotate-[720deg] transition-transform duration-500 [&.is-active]:gap-0"
         >
-          &#9776;
+          <!-- Top Bun: Moves down 9 pixels and tilts forward 45 degrees -->
+          <span
+            class="w-8 h-[3px] bg-white rounded transition-transform duration-500 group-[.is-active]:rotate-45"
+          ></span>
+
+          <!-- Meat: Fades away to 0 opacity -->
+          <span
+            class="w-8 h-[3px] bg-white rounded transition-opacity duration-500 group-[.is-active]:opacity-0"
+          ></span>
+
+          <!-- Bottom Bun: Moves up 9 pixels and tilts backward 45 degrees -->
+          <span
+            class="w-8 h-[3px] bg-white rounded transition-transform duration-500 group-[.is-active]:-rotate-45"
+          ></span>
         </button>
-        
+
         <button
           class="bg-[#2F1E14]/90 text-white font-semibold py-2 px-4 rounded-3xl hover:bg-[#A08055] dark:bg-[#BA986A]/35 dark:hover:bg-[#BA986A]/50 hidden lg:inline-block"
         >
           WHATSAPP
         </button>
       </section>
-      <nav class="flex flex-col items-center md:hidden left-0 bg-black min-w-full absolute top-full min-h-screen py-14" >
-            <a href="#" class="font-bebas tracking-[3px] text-white text-4xl dark:text-[#eee5e2] hover:text-[#BA986A] hover:scale-x-125 py-6 px-4">Home</a>
-            <a href="#" class="font-bebas tracking-[3px] text-white text-4xl dark:text-[#eee5e2] hover:text-[#BA986A] hover:scale-x-125 py-6 px-4">Services</a>
-            <a href="#" class="font-bebas tracking-[3px] text-white text-4xl dark:text-[#eee5e2] hover:text-[#BA986A] hover:scale-x-125 py-6 px-4">About</a>
-            <a href="#" class="font-bebas tracking-[3px] text-white text-4xl dark:text-[#eee5e2] hover:text-[#BA986A] hover:scale-x-125 py-6 px-4">Contact</a>
-        </nav>
+      <nav
+        id="nav-drop-down"
+        class="hidden flex-col items-center left-0 bg-black min-w-full absolute top-full min-h-screen py-14 origin-top animate-bounces"
+      >
+        <a
+          href="#"
+          class="font-bebas tracking-[3px] text-white text-4xl dark:text-[#eee5e2] hover:text-[#BA986A] hover:scale-x-125 py-6 px-4"
+          >Home</a
+        >
+        <a
+          href="#"
+          class="font-bebas tracking-[3px] text-white text-4xl dark:text-[#eee5e2] hover:text-[#BA986A] hover:scale-x-125 py-6 px-4"
+          >Services</a
+        >
+        <a
+          href="#"
+          class="font-bebas tracking-[3px] text-white text-4xl dark:text-[#eee5e2] hover:text-[#BA986A] hover:scale-x-125 py-6 px-4"
+          >About</a
+        >
+        <a
+          href="#"
+          class="font-bebas tracking-[3px] text-white text-4xl dark:text-[#eee5e2] hover:text-[#BA986A] hover:scale-x-125 py-6 px-4"
+          >Contact</a
+        >
+      </nav>
     </header>
-    <main class=" w-full items-center">
+    <main class="w-full items-center">
       <section
         class="min-w-full p-7 flex flex-col-reverse justify-between items-center gap-20 min-h-screen lg:flex-row"
       >
@@ -159,3 +198,13 @@
     </main>
   </body>
 </html>
+<script>
+  const hamburger =document.getElementById('menu-trigger');
+  const menu = document.getElementById('nav-drop-down');
+
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('is-active');
+    menu.classList.toggle('hidden');
+    menu.classList.toggle('flex');
+  })
+</script>

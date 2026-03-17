@@ -558,6 +558,10 @@ video {
   position: absolute;
 }
 
+.relative {
+  position: relative;
+}
+
 .sticky {
   position: sticky;
 }
@@ -616,12 +620,28 @@ video {
   height: 3rem;
 }
 
+.h-10 {
+  height: 2.5rem;
+}
+
 .h-\[1000px\] {
   height: 1000px;
 }
 
+.h-\[3px\] {
+  height: 3px;
+}
+
 .min-h-screen {
   min-height: 100vh;
+}
+
+.w-10 {
+  width: 2.5rem;
+}
+
+.w-8 {
+  width: 2rem;
 }
 
 .w-full {
@@ -638,6 +658,28 @@ video {
 
 .max-w-xl {
   max-width: 36rem;
+}
+
+.origin-top {
+  transform-origin: top;
+}
+
+@keyframes bounces {
+  0% {
+    transform: scaleY(0);
+  }
+
+  80% {
+    transform: scaleY(1.3);
+  }
+
+  100% {
+    transform: scaleY(1);
+  }
+}
+
+.animate-bounces {
+  animation: bounces 0.5s ease-in-out forwards;
 }
 
 .flex-col {
@@ -668,6 +710,10 @@ video {
   justify-content: space-between;
 }
 
+.gap-1\.5 {
+  gap: 0.375rem;
+}
+
 .gap-20 {
   gap: 5rem;
 }
@@ -690,6 +736,10 @@ video {
 
 .text-nowrap {
   text-wrap: nowrap;
+}
+
+.rounded {
+  border-radius: 0.25rem;
 }
 
 .rounded-2xl {
@@ -803,16 +853,16 @@ video {
   text-align: center;
 }
 
+.font-bebas {
+  font-family: "Bebas Neue", sans-serif;
+}
+
 .font-dm-serif {
   font-family: "DM Serif Display", serif;
 }
 
 .font-mona {
   font-family: Mona Sans, sans-serif;
-}
-
-.font-bebas {
-  font-family: "Bebas Neue", sans-serif;
 }
 
 .text-2xl {
@@ -860,10 +910,6 @@ video {
   letter-spacing: 2px;
 }
 
-.tracking-\[px\] {
-  letter-spacing: px;
-}
-
 .tracking-\[3px\] {
   letter-spacing: 3px;
 }
@@ -906,26 +952,27 @@ video {
   backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
 }
 
+.transition-opacity {
+  transition-property: opacity;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.transition-transform {
+  transition-property: transform;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.duration-500 {
+  transition-duration: 500ms;
+}
+
 .no-scrollbar {
   scrollbar-width: none;
   -webkit-scrollbar {
     display: none;
   }
-}
-
-.hover\:scale-x-50:hover {
-  --tw-scale-x: .5;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.hover\:scale-x-150:hover {
-  --tw-scale-x: 1.5;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.hover\:scale-x-100:hover {
-  --tw-scale-x: 1;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .hover\:scale-x-125:hover {
@@ -936,11 +983,6 @@ video {
 .hover\:bg-\[\#A08055\]:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(160 128 85 / var(--tw-bg-opacity, 1));
-}
-
-.hover\:py-6:hover {
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
 }
 
 .hover\:text-\[\#2F1E14\]\/80:hover {
@@ -981,6 +1023,20 @@ video {
   --tw-ring-color: rgb(186 152 106 / var(--tw-ring-opacity, 1));
 }
 
+.group.is-active .group-\[\.is-active\]\:-rotate-45 {
+  --tw-rotate: -45deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.group.is-active .group-\[\.is-active\]\:rotate-45 {
+  --tw-rotate: 45deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.group.is-active .group-\[\.is-active\]\:opacity-0 {
+  opacity: 0;
+}
+
 @media not all and (min-width: 640px) {
   .max-sm\:mx-20 {
     margin-left: 5rem;
@@ -1004,18 +1060,6 @@ video {
 }
 
 @media (min-width: 800px) {
-  .tab\:inline-block {
-    display: inline-block;
-  }
-
-  .tab\:hidden {
-    display: none;
-  }
-
-  .tab\:text-left {
-    text-align: left;
-  }
-
   .tab\:text-center {
     text-align: center;
   }
@@ -1091,4 +1135,13 @@ video {
   .dark\:hover\:text-\[\#BA986A\]\/70:hover {
     color: rgb(186 152 106 / 0.7);
   }
+}
+
+.\[\&\.is-active\]\:rotate-\[720deg\].is-active {
+  --tw-rotate: 720deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.\[\&\.is-active\]\:gap-0.is-active {
+  gap: 0px;
 }

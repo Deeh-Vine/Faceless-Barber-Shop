@@ -6,6 +6,22 @@ module.exports = {
       screens: {
         tab: "800px",
       },
+      colors: {
+              barber: {
+                light: '#F8FAFC', // Crisp Light Background
+                navy: '#1A2235',  
+                deepnavy: '#020618', // Deep Flyer Blue
+                gold: {
+                  DEFAULT: '#B68E5C', // Standard Gold
+                  light: '#CFA06D',   // Hover Gold
+                },
+                espresso: {
+                  700: '#634433', // Soft text (paragraphs)
+                  800: '#4A3123', // Button hover
+                  900: '#362319', // Main headings & buttons
+                }
+              }
+            },
       keyframes: {
         bounces: {
           "0%": {

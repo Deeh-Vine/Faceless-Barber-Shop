@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {
       screens: {
-        tab: "800px",
+        tab: "850px",
       },
       colors: {
               barber: {

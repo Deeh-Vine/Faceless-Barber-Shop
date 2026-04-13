@@ -185,7 +185,7 @@
             Premium Grooming
           </h2>
           <p
-            class="text-barber-espresso-700 dark:text-white/60 max-w-2xl mx-auto transition-colors duration-500 text-lg"
+            class="text-barber-espresso-700 dark:text-white/60 max-w-2xl mx-auto transition-colors duration-500 text-lg font-medium"
           >
             Hover over a service to view details and pricing. Experience the
             Faceless standard.
@@ -202,7 +202,7 @@
               class="relative h-64 lg:h-80 w-full overflow-hidden bg-slate-200"
             >
               <img
-                src="images/haircut.png"
+                src="images/haircut.jpg"
                 alt="Classic Haircut"
                 class="w-full h-full object-cover transition-transform duration-700 lg:group-hover:scale-110"
               />
@@ -237,7 +237,7 @@
               class="relative h-64 lg:h-80 w-full overflow-hidden bg-slate-200"
             >
               <img
-                src="images/styling.png"
+                src="images/styling.jpg"
                 alt="Hair Styling"
                 class="w-full h-full object-cover transition-transform duration-700 lg:group-hover:scale-110"
               />
@@ -271,7 +271,7 @@
               class="relative h-64 lg:h-80 w-full overflow-hidden bg-slate-200"
             >
               <img
-                src="images/buzzcut.png"
+                src="images/buzzcut.jpg"
                 alt="Buzz Cut"
                 class="w-full h-full object-cover transition-transform duration-700 lg:group-hover:scale-110"
               />
@@ -338,7 +338,7 @@
               class="relative h-64 lg:h-80 w-full overflow-hidden bg-slate-200"
             >
               <img
-                src="https://images.unsplash.com/photo-1580618672591-eb180b1a973f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                src="images/FemaleCut.webp"
                 alt="Women's Cut"
                 class="w-full h-full object-cover transition-transform duration-700 lg:group-hover:scale-110"
               />
@@ -372,7 +372,7 @@
               class="relative h-64 lg:h-80 w-full overflow-hidden bg-slate-200"
             >
               <img
-                src="https://images.unsplash.com/photo-1605497788044-5a32c7078486?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                src="images/Dreadlock Retwist.jpg"
                 alt="Dreadlock Retwist"
                 class="w-full h-full object-cover transition-transform duration-700 lg:group-hover:scale-110"
               />
@@ -406,7 +406,7 @@
               class="relative h-64 lg:h-80 w-full overflow-hidden bg-slate-200"
             >
               <img
-                src="https://images.unsplash.com/photo-1522337660859-02fbefca4702?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                src="images/StarterLocks.jpg"
                 alt="Starter Locs"
                 class="w-full h-full object-cover transition-transform duration-700 lg:group-hover:scale-110"
               />
@@ -440,7 +440,7 @@
               class="relative h-64 lg:h-80 w-full overflow-hidden bg-slate-200"
             >
               <img
-                src="images/braids.png"
+                src="images/braids.jpg"
                 alt="Premium Braids"
                 class="w-full h-full object-cover transition-transform duration-700 lg:group-hover:scale-110"
               />
@@ -473,7 +473,7 @@
               class="relative h-64 lg:h-80 w-full overflow-hidden bg-slate-200"
             >
               <img
-                src="images/hostel-haircut.png"
+                src="images/hostel-haircut.jpg"
                 alt="Home Service"
                 class="w-full h-full object-cover transition-transform duration-700 lg:group-hover:scale-110"
               />
@@ -499,23 +499,228 @@
             </div>
           </div>
         </div>
-        <p class="text-center text-barber-espresso-700/80 dark:text-white/70 lg:text-white/80 mb-4">
-            prices may vary based on location, service complexity and others.
-          </p>
+        <p class="text-center text-barber-espresso-700/90 dark:text-white/70">
+          prices may vary based on location, service complexity and others.
+        </p>
       </section>
-      <section>
+      <section
+        class="px-5 dark:bg-slate-900 min-w-full border-t pt-20 border-barber-gold-light"
+      >
+        <!-- Section Header -->
+        <div class="text-center mb-16">
+          <h2
+            class="text-4xl md:text-5xl font-dm-serif text-barber-navy dark:text-white mb-4 transition-colors duration-500"
+          >
+            Loved by Builders
+          </h2>
+          <p
+            class="text-barber-espresso-700 dark:text-white/60 max-w-2xl mx-auto transition-colors duration-500 text-lg"
+          >
+            Here is what our clients have to say about our work.
+          </p>
+        </div>
 
+        <!-- The "Window" -->
+        <div class="fade-edges-window overflow-hidden w-full flex py-10">
+          <!-- The "Train Track" -->
+          <div
+            class="flex w-max gap-14 pr-6 animate-scrolling hover:animate-paused"
+          >
+            <!-- SET 1: The Original 4 Testimonials         -->
+
+            <div
+              class="w-[36rem] h-max shrink-0 rounded-2xl border border-barber-light bg-slate-400/60 dark:bg-barber-navy p-8 shadow-[0_20px_25px_-5px_rgba(0,0,0,0.5)]"
+            >
+              <div class="flex items-center gap-6 mb-6">
+                <img
+                  src="https://i.pravatar.cc/150?img=11"
+                  alt="Michael"
+                  class="w-[4.5rem] h-[4.5rem] rounded-full object-cover"
+                />
+                <div>
+                  <div class="font-semibold text-barber-espresso-700 text-lg">
+                    Michael Adebayo
+                  </div>
+                  <div class="text-base text-barber-light/60">
+                    Founder, TechStart
+                  </div>
+                </div>
+              </div>
+              <p class="text-barber-light/95 leading-relaxed text-base">
+                "Damilola is a rare find. He didn't just write code; he improved
+                our entire UX. The site loads instantly now."
+              </p>
+            </div>
+
+            <div
+              class="w-[36rem] h-max shrink-0 rounded-2xl border border-barber-light bg-slate-400/60 dark:bg-barber-navy p-8 shadow-[0_20px_25px_-5px_rgba(0,0,0,0.5)]"
+            >
+              <div class="flex items-center gap-6 mb-6">
+                <img
+                  src="https://i.pravatar.cc/150?img=5"
+                  alt="Sarah"
+                  class="w-[4.5rem] h-[4.5rem] rounded-full object-cover"
+                />
+                <div>
+                  <div class="font-semibold text-barber-light text-lg">
+                    Sarah Jenkins
+                  </div>
+                  <div class="text-base text-barber-light/60">
+                    Product Manager
+                  </div>
+                </div>
+              </div>
+              <p class="text-barber-light/95 leading-relaxed text-base">
+                "Delivered 2 days ahead of schedule. His understanding of
+                complex layouts and animations is top-tier."
+              </p>
+            </div>
+
+            <div
+              class="w-[36rem] h-max shrink-0 rounded-2xl border border-barber-light bg-slate-400/60 dark:bg-barber-navy p-8 shadow-[0_20px_25px_-5px_rgba(0,0,0,0.5)]"
+            >
+              <div class="flex items-center gap-6 mb-6">
+                <img
+                  src="https://i.pravatar.cc/150?img=8"
+                  alt="David"
+                  class="w-[4.5rem] h-[4.5rem] rounded-full object-cover"
+                />
+                <div>
+                  <div class="font-semibold text-barber-light text-lg">
+                    David Okon
+                  </div>
+                  <div class="text-base text-barber-light/60">
+                    CTO, Fintech Solutions
+                  </div>
+                </div>
+              </div>
+              <p class="text-barber-light/95 leading-relaxed text-base">
+                "Cleanest codebase I've seen in a long time. Highly recommended
+                for any scalable frontend project."
+              </p>
+            </div>
+
+            <div
+              class="w-[36rem] h-max shrink-0 rounded-2xl border border-barber-light bg-slate-400/60 dark:bg-barber-navy p-8 shadow-[0_20px_25px_-5px_rgba(0,0,0,0.5)]"
+            >
+              <div class="flex items-center gap-6 mb-6">
+                <img
+                  src="https://i.pravatar.cc/150?img=9"
+                  alt="Jessica"
+                  class="w-[4.5rem] h-[4.5rem] rounded-full object-cover"
+                />
+                <div>
+                  <div class="font-semibold text-barber-light text-lg">
+                    Jessica Lee
+                  </div>
+                  <div class="text-base text-barber-light/60">Design Lead</div>
+                </div>
+              </div>
+              <p class="text-barber-light/95 leading-relaxed text-base">
+                "Finally, a developer who cares about design details! He nailed
+                the pixel-perfect implementation of our Figma files."
+              </p>
+            </div>
+
+            <!-- SET 2: The Clones (EXACT copy of Set 1)    -->
+
+            <div
+              class="w-[36rem] h-max shrink-0 rounded-2xl border border-barber-light bg-slate-400/60 dark:bg-barber-navy p-8 shadow-[0_20px_25px_-5px_rgba(0,0,0,0.5)]"
+            >
+              <div class="flex items-center gap-6 mb-6">
+                <img
+                  src="https://i.pravatar.cc/150?img=11"
+                  alt="Michael"
+                  class="w-[4.5rem] h-[4.5rem] rounded-full object-cover"
+                />
+                <div>
+                  <div class="font-semibold text-barber-light text-lg">
+                    Michael Adebayo
+                  </div>
+                  <div class="text-base text-barber-light/60">
+                    Founder, TechStart
+                  </div>
+                </div>
+              </div>
+              <p class="text-barber-light/95 leading-relaxed text-base">
+                "Damilola is a rare find. He didn't just write code; he improved
+                our entire UX. The site loads instantly now."
+              </p>
+            </div>
+
+            <div
+              class="w-[36rem] h-max shrink-0 rounded-2xl border border-barber-light bg-slate-400/60 dark:bg-barber-navy p-8 shadow-[0_20px_25px_-5px_rgba(0,0,0,0.5)]"
+            >
+              <div class="flex items-center gap-6 mb-6">
+                <img
+                  src="https://i.pravatar.cc/150?img=5"
+                  alt="Sarah"
+                  class="w-[4.5rem] h-[4.5rem] rounded-full object-cover"
+                />
+                <div>
+                  <div class="font-semibold text-barber-light text-lg">
+                    Sarah Jenkins
+                  </div>
+                  <div class="text-base text-barber-light/60">
+                    Product Manager
+                  </div>
+                </div>
+              </div>
+              <p class="text-barber-light/95 leading-relaxed text-base">
+                "Delivered 2 days ahead of schedule. His understanding of
+                complex layouts and animations is top-tier."
+              </p>
+            </div>
+
+            <div
+              class="w-[36rem] h-max shrink-0 rounded-2xl border border-barber-light bg-slate-400/60 dark:bg-barber-navy p-8 shadow-[0_20px_25px_-5px_rgba(0,0,0,0.5)]"
+            >
+              <div class="flex items-center gap-6 mb-6">
+                <img
+                  src="https://i.pravatar.cc/150?img=8"
+                  alt="David"
+                  class="w-[4.5rem] h-[4.5rem] rounded-full object-cover"
+                />
+                <div>
+                  <div class="font-semibold text-barber-light text-lg">
+                    David Okon
+                  </div>
+                  <div class="text-base text-barber-light/60">
+                    CTO, Fintech Solutions
+                  </div>
+                </div>
+              </div>
+              <p class="text-barber-light/95 leading-relaxed text-base">
+                "Cleanest codebase I've seen in a long time. Highly recommended
+                for any scalable frontend project."
+              </p>
+            </div>
+
+            <div
+              class="w-[36rem] h-max shrink-0 rounded-2xl border border-barber-light bg-slate-400/60 dark:bg-barber-navy p-8 shadow-[0_20px_25px_-5px_rgba(0,0,0,0.5)]"
+            >
+              <div class="flex items-center gap-6 mb-6">
+                <img
+                  src="https://i.pravatar.cc/150?img=9"
+                  alt="Jessica"
+                  class="w-[4.5rem] h-[4.5rem] rounded-full object-cover"
+                />
+                <div>
+                  <div class="font-semibold text-barber-light text-lg">
+                    Jessica Lee
+                  </div>
+                  <div class="text-base text-barber-light/60">Design Lead</div>
+                </div>
+              </div>
+              <p class="text-barber-light/95 leading-relaxed text-base">
+                "Finally, a developer who cares about design details! He nailed
+                the pixel-perfect implementation of our Figma files."
+              </p>
+            </div>
+          </div>
+        </div>
       </section>
     </main>
+    <script src="./script.js" defer></script>
   </body>
 </html>
-<script>
-  const hamburger = document.getElementById("menu-trigger");
-  const menu = document.getElementById("nav-drop-down");
-
-  hamburger.addEventListener("click", () => {
-    hamburger.classList.toggle("is-active");
-    menu.classList.toggle("hidden");
-    menu.classList.toggle("flex");
-  });
-</script>

@@ -620,6 +620,10 @@ video {
   margin-bottom: 1rem;
 }
 
+.mb-6 {
+  margin-bottom: 1.5rem;
+}
+
 .mr-2 {
   margin-right: 0.5rem;
 }
@@ -681,8 +685,17 @@ video {
   height: 3px;
 }
 
+.h-\[4\.5rem\] {
+  height: 4.5rem;
+}
+
 .h-full {
   height: 100%;
+}
+
+.h-max {
+  height: -moz-max-content;
+  height: max-content;
 }
 
 .min-h-\[80vh\] {
@@ -705,8 +718,21 @@ video {
   width: 2rem;
 }
 
+.w-\[36rem\] {
+  width: 36rem;
+}
+
+.w-\[4\.5rem\] {
+  width: 4.5rem;
+}
+
 .w-full {
   width: 100%;
+}
+
+.w-max {
+  width: -moz-max-content;
+  width: max-content;
 }
 
 .min-w-full {
@@ -723,6 +749,10 @@ video {
 
 .max-w-xl {
   max-width: 36rem;
+}
+
+.shrink-0 {
+  flex-shrink: 0;
 }
 
 .origin-top {
@@ -756,6 +786,20 @@ video {
 
 .animate-ping {
   animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+@keyframes scrolling {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scrolling {
+  animation: scrolling 20s infinite linear;
 }
 
 .grid-cols-1 {
@@ -794,6 +838,10 @@ video {
   gap: 0.375rem;
 }
 
+.gap-14 {
+  gap: 3.5rem;
+}
+
 .gap-2 {
   gap: 0.5rem;
 }
@@ -804,6 +852,10 @@ video {
 
 .gap-5 {
   gap: 1.25rem;
+}
+
+.gap-6 {
+  gap: 1.5rem;
 }
 
 .gap-8 {
@@ -875,6 +927,11 @@ video {
   border-color: rgb(182 142 92 / 0.2);
 }
 
+.border-barber-light {
+  --tw-border-opacity: 1;
+  border-color: rgb(248 250 252 / var(--tw-border-opacity, 1));
+}
+
 .bg-barber-espresso-900 {
   --tw-bg-opacity: 1;
   background-color: rgb(54 35 25 / var(--tw-bg-opacity, 1));
@@ -883,6 +940,11 @@ video {
 .bg-barber-light {
   --tw-bg-opacity: 1;
   background-color: rgb(248 250 252 / var(--tw-bg-opacity, 1));
+}
+
+.bg-barber-navy {
+  --tw-bg-opacity: 1;
+  background-color: rgb(26 34 53 / var(--tw-bg-opacity, 1));
 }
 
 .bg-green-500 {
@@ -931,6 +993,10 @@ video {
   padding: 1.5rem;
 }
 
+.p-8 {
+  padding: 2rem;
+}
+
 .px-16 {
   padding-left: 4rem;
   padding-right: 4rem;
@@ -949,6 +1015,11 @@ video {
 .px-8 {
   padding-left: 2rem;
   padding-right: 2rem;
+}
+
+.py-10 {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
 }
 
 .py-14 {
@@ -971,8 +1042,16 @@ video {
   padding-bottom: 1.5rem;
 }
 
+.pr-6 {
+  padding-right: 1.5rem;
+}
+
 .pt-16 {
   padding-top: 4rem;
+}
+
+.pt-20 {
+  padding-top: 5rem;
 }
 
 .pt-32 {
@@ -1045,6 +1124,10 @@ video {
   font-style: italic;
 }
 
+.leading-relaxed {
+  line-height: 1.625;
+}
+
 .tracking-\[2px\] {
   letter-spacing: 2px;
 }
@@ -1066,8 +1149,8 @@ video {
   color: rgb(99 68 51 / var(--tw-text-opacity, 1));
 }
 
-.text-barber-espresso-700\/80 {
-  color: rgb(99 68 51 / 0.8);
+.text-barber-espresso-700\/90 {
+  color: rgb(99 68 51 / 0.9);
 }
 
 .text-barber-espresso-800 {
@@ -1082,6 +1165,19 @@ video {
 .text-barber-gold {
   --tw-text-opacity: 1;
   color: rgb(182 142 92 / var(--tw-text-opacity, 1));
+}
+
+.text-barber-light {
+  --tw-text-opacity: 1;
+  color: rgb(248 250 252 / var(--tw-text-opacity, 1));
+}
+
+.text-barber-light\/60 {
+  color: rgb(248 250 252 / 0.6);
+}
+
+.text-barber-light\/95 {
+  color: rgb(248 250 252 / 0.95);
 }
 
 .text-barber-navy {
@@ -1106,6 +1202,12 @@ video {
 
 .opacity-75 {
   opacity: 0.75;
+}
+
+.shadow-\[0_20px_25px_-5px_rgba\(0\2c 0\2c 0\2c 0\.5\)\] {
+  --tw-shadow: 0 20px 25px -5px rgba(0,0,0,0.5);
+  --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
 .shadow-lg {
@@ -1154,6 +1256,11 @@ video {
 
 .duration-700 {
   transition-duration: 700ms;
+}
+
+.fade-edges-window {
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%);
+  mask-image: linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%);
 }
 
 .no-scrollbar {
@@ -1317,10 +1424,6 @@ video {
     color: rgb(255 255 255 / var(--tw-text-opacity, 1));
   }
 
-  .lg\:text-white\/80 {
-    color: rgb(255 255 255 / 0.8);
-  }
-
   .lg\:text-white\/90 {
     color: rgb(255 255 255 / 0.9);
   }
@@ -1362,6 +1465,11 @@ video {
 
   .dark\:bg-barber-gold-light\/10 {
     background-color: rgb(207 160 109 / 0.1);
+  }
+
+  .dark\:bg-barber-navy {
+    --tw-bg-opacity: 1;
+    background-color: rgb(26 34 53 / var(--tw-bg-opacity, 1));
   }
 
   .dark\:bg-slate-900 {
